@@ -1,10 +1,10 @@
 console.log("it works!");
-function calculateBill(){
+function calculateBill(myBill, myRate){
     //this is the function
     console.log("calcBill is running");
-    const total = 100 *1.13;
-    console.log(total);
+    const total = myBill*(1+myRate);
     return total;
 }
-const myTotal = calculateBill();
-console.log(`Your total is: ${myTotal}`);
+const myTotal = calculateBill(100, 0.13);
+const myTotal2 = calculateBill(200, 0.15);
+console.log(`Your totals are: ${myTotal} and ${myTotal2}`);
