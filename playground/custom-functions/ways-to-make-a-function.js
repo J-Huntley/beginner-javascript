@@ -16,8 +16,12 @@ const wes = {
     sayHi: function sayHi(){
         console.log(`hey ${this.name}`);
         return "Hey wes!";
+    },
+    yellHi() {
+        console.log('HEYYY');
     }
 }
 
 const button = document.querySelector(".clickMe");
-console.log(button);
+button.addEventListener("click", wes.sayHi);
+setTimeout(wes.yellHi, 1000);
